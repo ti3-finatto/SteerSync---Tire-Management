@@ -140,4 +140,13 @@
     body {
         @apply font-sans antialiased;
     }
+
+    select {
+        @apply bg-background text-foreground;
+    }
+
+    select option {
+        background-color: var(--background) !important;
+        color: var(--foreground) !important;
+    }
 }

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan migrate --path=database/migrations/2026_03_01_000000_create_t_statuspneu_table.php)",
+      "Bash(\"c:/laragon/bin/php/php8.4.5/php.exe\" artisan migrate --path=database/migrations/2026_03_01_000000_create_t_statuspneu_table.php)",
+      "Bash(\"/c/laragon/bin/php/php-8.3.30-Win32-vs16-x64/php.exe\" artisan migrate --path=database/migrations/2026_03_01_000000_create_t_statuspneu_table.php)",
+      "Bash(\"/c/laragon/bin/php/php-8.3.30-Win32-vs16-x64/php.exe\" artisan migrate --path=database/migrations/2026_03_01_010000_create_t_tipoveiculo_table.php)"
+    ]
+  }
+}

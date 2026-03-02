@@ -58,19 +58,67 @@ const getMainNavSections = (isAdmin: boolean): SidebarNavSection[] => [
                 title: 'Pneus',
                 icon: CircleDot,
                 items: [
-                    { title: 'Marcas', disabled: true },
-                    { title: 'Modelos', disabled: true },
-                    { title: 'Medidas', disabled: true },
-                    { title: 'Configuracoes', disabled: true },
+                    {
+                        title: 'Cadastro Rapido',
+                        href: isAdmin ? '/cadastros/pneu-rapido' : undefined,
+                        disabled: !isAdmin,
+                    },
+                    {
+                        title: 'Consulta Individual',
+                        href: isAdmin ? '/cadastros/pneu-consulta' : undefined,
+                        disabled: !isAdmin,
+                    },
+                    {
+                        title: 'Marcas',
+                        href: isAdmin ? '/cadastros/marca-pneu' : undefined,
+                        disabled: !isAdmin,
+                    },
+                    {
+                        title: 'Modelos',
+                        href: isAdmin ? '/cadastros/modelo-pneu' : undefined,
+                        disabled: !isAdmin,
+                    },
+                    {
+                        title: 'Desenhos',
+                        href: isAdmin ? '/cadastros/desenho-banda' : undefined,
+                        disabled: !isAdmin,
+                    },
+                    {
+                        title: 'Medidas',
+                        href: isAdmin ? '/cadastros/medida-pneu' : undefined,
+                        disabled: !isAdmin,
+                    },
+                    {
+                        title: 'Configuracoes',
+                        href: isAdmin ? '/cadastros/configuracao-pneu' : undefined,
+                        disabled: !isAdmin,
+                    },
                 ],
             },
             {
                 title: 'Veiculos',
                 icon: CarFront,
                 items: [
-                    { title: 'Cadastrar', disabled: true },
-                    { title: 'Marcas', disabled: true },
-                    { title: 'Modelos', disabled: true },
+                    {
+                        title: 'Cadastrar',
+                        href: isAdmin ? '/cadastros/veiculo' : undefined,
+                        disabled: !isAdmin,
+                    },
+                    {
+                        title: 'Marcas',
+                        href: isAdmin ? '/cadastros/marca-veiculo' : undefined,
+                        disabled: !isAdmin,
+                    },
+                    {
+                        title: 'Modelos',
+                        href: isAdmin ? '/cadastros/modelo-veiculo' : undefined,
+                        disabled: !isAdmin,
+                    },
+                    {
+                        title: 'Tipos',
+                        href: isAdmin ? '/cadastros/tipo-veiculo' : undefined,
+                        disabled: !isAdmin,
+                    },
                     { title: 'Alterar', disabled: true },
                 ],
             },
@@ -97,7 +145,11 @@ const getMainNavSections = (isAdmin: boolean): SidebarNavSection[] => [
                 title: 'Relatorios',
                 icon: FileBarChart2,
                 items: [
-                    { title: 'Pneus', disabled: true },
+                    {
+                        title: 'Pneus',
+                        href: isAdmin ? '/relatorios/pneus' : undefined,
+                        disabled: !isAdmin,
+                    },
                     { title: 'Veiculos', disabled: true },
                     { title: 'Movimentacoes', disabled: true },
                     { title: 'Transferencias', disabled: true },
@@ -136,8 +188,10 @@ const getMainNavSections = (isAdmin: boolean): SidebarNavSection[] => [
         items: [
             {
                 title: 'Usuarios',
+                href: isAdmin ? '/cadastros/usuario' : undefined,
                 icon: UserRoundCog,
-                disabled: true,
+                startsWith: true,
+                disabled: !isAdmin,
             },
             {
                 title: 'Historico de Logins',
